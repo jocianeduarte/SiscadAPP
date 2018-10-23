@@ -1,0 +1,544 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Cadastro
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-stepper #stepper [mode]="'horizontal'" (selectIndexChange)="selectChange($event)">
+    <ion-step>
+      <h2>Dados Pessoais</h2>
+      <ion-list>
+
+        <ion-item>
+          <ion-label floating>Nome</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label floating>Data de Nascimento<ion-icon name="calendar" float-right></ion-icon></ion-label>
+          <ion-datetime displayFormat="DD MMM YYYY"></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>RG</ion-label>
+          <ion-input type="string"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Órgão Expedidor</ion-label>
+          <ion-input type="string"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>CPF</ion-label>
+          <ion-input type="string"></ion-input>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label floating>Telefone</ion-label>
+          <ion-input type="string"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Rua</ion-label>
+          <ion-input type="string"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Bairro</ion-label>
+          <ion-input type="string"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Número</ion-label>
+          <ion-input type="string"></ion-input>
+        </ion-item>
+
+        <ion-list radio-group>
+          <ion-list-header>
+            Cor
+          </ion-list-header>
+        
+          <ion-item>
+            <ion-label>Branca</ion-label>
+            <ion-radio checked="true" value="branca"></ion-radio>
+          </ion-item>
+          
+          <ion-item>
+            <ion-label>Preta</ion-label>
+            <ion-radio value="preta"></ion-radio>
+          </ion-item>
+          
+          <ion-item>
+            <ion-label>Parda</ion-label>
+            <ion-radio value="parda"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Indigena</ion-label>
+            <ion-radio value="indigena"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Amarela</ion-label>
+            <ion-radio value="amarela"></ion-radio>
+          </ion-item>
+
+        </ion-list>
+
+        <ion-list radio-group>
+          <ion-list-header>
+            Situação Conjugal
+          </ion-list-header>
+        
+          <ion-item>
+            <ion-label>Solteira</ion-label>
+            <ion-radio checked="true" value="solteira"></ion-radio>
+          </ion-item>
+          
+          <ion-item>
+            <ion-label>Casada</ion-label>
+            <ion-radio value="casada"></ion-radio>
+          </ion-item>
+          
+          <ion-item>
+            <ion-label>União Estável</ion-label>
+            <ion-radio value="uniaoestavel"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Viúva</ion-label>
+            <ion-radio value="viuva"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Divorciada</ion-label>
+            <ion-radio value="divorciada"></ion-radio>
+          </ion-item>
+  
+        </ion-list>
+
+
+      </ion-list>
+      <button ion-button small ionicStepperNext float-right>Próximo</button>
+    </ion-step>
+    <ion-step>
+      <h2>Sexualidade</h2>
+      <ion-list radio-group>
+        <ion-list-header>
+          Gênero
+        </ion-list-header>
+        
+        <ion-item>
+          <ion-label>Feminino</ion-label>
+          <ion-radio checked="true" value="feminino"></ion-radio>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label>Masculino</ion-label>
+          <ion-radio value="masculino"></ion-radio>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label>Hemafroditas</ion-label>
+          <ion-radio value="hemafroditas"></ion-radio>
+        </ion-item>
+  
+      </ion-list>
+      <ion-list radio-group>
+        <ion-list-header>
+          Orientação sexual
+        </ion-list-header>
+        
+        <ion-item>
+          <ion-label>Heterossexual</ion-label>
+          <ion-radio checked="true" value="hetero"></ion-radio>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label>Homossexual</ion-label>
+          <ion-radio value="homo"></ion-radio>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label>Bissexual</ion-label>
+          <ion-radio value="bi"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Assexuad@</ion-label>
+          <ion-radio value="a"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Panssexual</ion-label>
+          <ion-radio value="pan"></ion-radio>
+        </ion-item>
+
+      </ion-list>
+      
+      <ion-item>
+        <ion-label>Transexual</ion-label>
+        <ion-toggle checked="false"></ion-toggle>
+      </ion-item>
+
+      <ion-list radio-group>
+        <ion-list-header>
+          Identidade Sexual
+        </ion-list-header>
+        
+        <ion-item>
+          <ion-label>Católica</ion-label>
+          <ion-radio checked="true" value="catolica"></ion-radio>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label>Evangélica</ion-label>
+          <ion-radio value="evangelica"></ion-radio>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label>Espírita</ion-label>
+          <ion-radio value="espirita"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Daimista</ion-label>
+          <ion-radio value="daimista"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Matriz Africana</ion-label>
+          <ion-radio value="africana"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Sem Religião</ion-label>
+          <ion-radio value="sem"></ion-radio>
+        </ion-item>
+  
+      </ion-list>
+
+      <button ion-button color="light" small ionicStepperPrevious>Voltar</button>
+      <button ion-button small ionicStepperNext float-right>Próximo</button>
+    </ion-step>
+    <ion-step>
+      <h2>Dados Socioeconômicos</h2>
+      <ion-list>
+        <ion-list radio-group>
+          <ion-list-header>
+            Escolaridade
+          </ion-list-header>
+          
+          <ion-item>
+            <ion-label>Não alfabetizada</ion-label>
+            <ion-radio checked="true" value="naoalfabetizada"></ion-radio>
+          </ion-item>
+          
+          <ion-item>
+            <ion-label>1ª a 4ª</ion-label>
+            <ion-radio value="1a4"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>5ª a 8ª</ion-label>
+            <ion-radio value="5a8"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Fundamental Completo</ion-label>
+            <ion-radio value="fundamentalcompleto"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Médio Incompleto</ion-label>
+            <ion-radio value="medioincompleto"></ion-radio>
+          </ion-item>
+          
+          <ion-item>
+            <ion-label>Médio Completo</ion-label>
+            <ion-radio value="mediocompleto"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Superior</ion-label>
+            <ion-radio value="superior"></ion-radio>
+          </ion-item>
+        </ion-list>
+        <ion-list radio-group>
+            <ion-list-header>
+              Trabalha?
+            </ion-list-header>
+            
+            <ion-item>
+              <ion-label>Sim</ion-label>
+              <ion-radio checked="true" value="sim"></ion-radio>
+            </ion-item>
+    
+            <ion-item>
+              <ion-label>Não</ion-label>
+              <ion-radio value="nao"></ion-radio>
+            </ion-item>
+          
+          </ion-list>
+          <ion-list radio-group>
+            <ion-list-header>
+                Remunerado?
+            </ion-list-header>
+            
+            <ion-item>
+              <ion-label>Sim</ion-label>
+              <ion-radio checked="true" value="sim"></ion-radio>
+            </ion-item>
+    
+            <ion-item>
+              <ion-label>Não</ion-label>
+              <ion-radio value="nao"></ion-radio>
+            </ion-item>
+            
+          </ion-list>
+          <ion-list radio-group>
+            <ion-list-header>
+                Profissão/Ocupação
+            </ion-list-header>
+            
+            <ion-item>
+              <ion-label>Do lar</ion-label>
+              <ion-radio checked="true" value="dolar"></ion-radio>
+            </ion-item>
+    
+            <ion-item>
+              <ion-label>Estudando</ion-label>
+              <ion-radio value="estudando"></ion-radio>
+            </ion-item>
+    
+            <ion-item>
+              <ion-label>Desempregada</ion-label>
+              <ion-radio value="desempregada"></ion-radio>
+            </ion-item>
+              
+            <ion-item>
+              <ion-label>Vendedora</ion-label>
+              <ion-radio value="vendedora"></ion-radio>
+            </ion-item>
+    
+            <ion-item>
+              <ion-label>Doméstica</ion-label>
+              <ion-radio value="domestica"></ion-radio>
+            </ion-item>
+            
+            <ion-item>
+              <ion-label>Funcionária Pública</ion-label>
+              <ion-radio value="funcpublica"></ion-radio>
+            </ion-item>
+    
+          </ion-list>
+          <ion-item>
+            <ion-label floating>Número de filh@s</ion-label>
+            <ion-input type="number"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Idade dos filhos</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+          <ion-list radio-group>
+            <ion-list-header>
+                Recebe algum benefício social do governo?
+            </ion-list-header>
+            
+            <ion-item>
+              <ion-label>Não</ion-label>
+              <ion-radio checked="true" value="nao"></ion-radio>
+            </ion-item>
+    
+            <ion-item>
+              <ion-label>Sim</ion-label>
+              <ion-radio value="sim"></ion-radio>
+            </ion-item>
+            
+            <ion-item>
+              <ion-label floating>Qual?</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+    
+          </ion-list>
+
+          <ion-item>
+            <ion-label floating>Renda Familiar</ion-label>
+            <ion-input type="string"></ion-input>
+          </ion-item>
+
+      </ion-list>
+      <button ion-button color="light" small ionicStepperPrevious>Voltar</button>
+      <button ion-button small ionicStepperNext float-right>Próximo</button>
+    </ion-step>
+    <ion-step>
+      <h2>Busca pelo serviço</h2>
+      <ion-list>
+        <ion-list radio-group>
+            <ion-list-header>
+                Motivo da procura
+            </ion-list-header>
+            
+            <ion-item>
+              <ion-label>Atendimento Social</ion-label>
+              <ion-radio checked="true" value="social"></ion-radio>
+            </ion-item>
+    
+            <ion-item>
+              <ion-label>Atendimento Psicológico</ion-label>
+              <ion-radio value="psico"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Curso</ion-label>
+              <ion-radio value="curso"></ion-radio>
+            </ion-item>
+      
+          </ion-list>
+
+          <ion-list radio-group>
+            <ion-list-header>
+              Em qual área tem interesse?
+            </ion-list-header>
+            
+            <ion-item>
+              <ion-label>Culinária</ion-label>
+              <ion-radio checked="true" value="culinaria"></ion-radio>
+            </ion-item>
+    
+            <ion-item>
+              <ion-label>Beleza</ion-label>
+              <ion-radio value="beleza"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Artesanato</ion-label>
+              <ion-radio value="artesanato"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Costura</ion-label>
+              <ion-radio value="costura"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Outros</ion-label>
+              <ion-radio value="outros"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+              <ion-label floating>Qual?</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+        
+          </ion-list>
+
+          <ion-list radio-group>
+            <ion-list-header>
+              Disponibilidade de Horário
+            </ion-list-header>
+            <ion-item>
+              <ion-label>Manhã</ion-label>
+              <ion-radio value="manha"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>Tarde</ion-label>
+              <ion-radio value="tarde "></ion-radio>
+            </ion-item>
+          </ion-list>
+      </ion-list>
+      <button ion-button color="light" small ionicStepperPrevious>Voltar</button>
+      <button ion-button small ionicStepperNext float-right>Próximo</button>
+    </ion-step>
+    <ion-step>
+      <h2>Screening</h2>
+      <ion-list>
+        <p>Você já se sentiu humilhada, intimidade, amendrontada, ameaçada, diminuída, acuada
+        por uma pessoa importante para você(Seu parceir@, pai/mãe, tio, irmão)? (violência Psicológica)</p>
+        <ion-list radio-group>
+          <ion-item>
+            <ion-label>Não</ion-label>
+            <ion-radio value="nao"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Sim</ion-label>
+            <ion-radio value="sim"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Por quem?</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+        </ion-list>
+        <p>Alguém próximo a você lhe bate ou já bateu? OU Alguém importante para você lhe
+        agrediu fisicamente?</p>
+        <ion-list radio-group>
+          <ion-item>
+            <ion-label>Não</ion-label>
+            <ion-radio value="nao"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Sim</ion-label>
+            <ion-radio value="sim"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Quem?</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+        </ion-list>
+        <p>Você já se sentiu forçada a ter relações sexuais com alguém?</p>
+        <ion-list radio-group>
+          <ion-item>
+            <ion-label>Não</ion-label>
+            <ion-radio value="nao"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Sim</ion-label>
+            <ion-radio value="sim"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Por quem?</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+        </ion-list>
+        <p>Você já teve algum objeto de uso pessoal, da sua casa ou instrumento de trabalho
+        danificado ou subtraído por alguma pessoa próxima a você?</p>
+        <ion-list radio-group>
+          <ion-item>
+            <ion-label>Não</ion-label>
+            <ion-radio value="nao"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Sim</ion-label>
+            <ion-radio value="sim"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Por quem?</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+        </ion-list>
+        <p>Você já se sentiu ofendida por uma pessoa próxima ter te difamado, injuriado
+        e ou caluniado?</p>
+        <ion-list radio-group>
+          <ion-item>
+            <ion-label>Não</ion-label>
+            <ion-radio value="nao"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Sim</ion-label>
+            <ion-radio value="sim"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Por quem?</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-list>
+      <button ion-button color="light" small ionicStepperPrevious>Voltar</button>
+      <button ion-button small ionicStepperNext float-right>Salvar</button>
+    </ion-step>
+  </ion-stepper>
+</ion-content>
