@@ -12,6 +12,14 @@
       <h2>Dados Pessoais</h2>
       <ion-list>
 
+        <ion-tem>
+            <ion-item>
+                <button ion-button color="newColor2" (click)="tirarFoto()">Tire uma foto para o cadastro!</button>
+            </ion-item>
+            
+            <img [src]="foto" />
+        </ion-tem>
+
         <ion-item>
           <ion-label floating>Nome</ion-label>
           <ion-input type="text"></ion-input>
@@ -538,7 +546,7 @@
         </ion-list>
       </ion-list>
       <button ion-button color="light" small ionicStepperPrevious>Voltar</button>
-      <button ion-button small ionicStepperNext float-right>Salvar</button>
+      <button (click)="salvarMulher()" ion-button small ionicStepperNext float-right>Salvar</button>
     </ion-step>
   </ion-stepper>
 </ion-content>
